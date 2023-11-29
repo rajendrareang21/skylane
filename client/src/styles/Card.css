@@ -1,0 +1,41 @@
+.product-card {
+  background-color: rgba(128, 128, 128, 0.097);
+  width: 18rem;
+}
+
+.product-card .card-name-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.product-card .card-price {
+  color: green;
+  font-weight: bold;
+}
+
+.card-price {
+  color: green;
+  font-weight: bold;
+}
+
+.product-card button {
+  border-radius: 0;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.product-card .card-text {
+  color: rgb(90, 89, 89);
+}
+
+.product-card .card img:hover {
+  transform: scale(0.9);
+}
+
+.product-card .card-img-top {
+  height: 300px !important;
+}
