@@ -77,7 +77,7 @@ font-family: 'Poppins', sans-serif;
 }
 
 .footer a:hover {
-  color: #f8c212;
+  color: #fdc200;
 }
 /* =================================
 ======== page not found css ======= */
@@ -129,7 +129,7 @@ font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
 }
 .cat-btn:hover {
-  background-color: #434343;
+  background-color: #202020;
   color: white;
 }
 /* ================
