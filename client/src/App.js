@@ -31,6 +31,7 @@ import MensCollection from "./pages/MensCollection";
 import KidsCollection from "./pages/KidsCollection";
 import TrendyWear from "./pages/TrendyWear";
 import FormalWear from "./pages/FormalWear";
+import Novel from "./pages/Novel";
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/novel" element={<Novel/>} />
         <Route path="/men-collection" element={<MensCollection/>}/>
         <Route path="/trendywear" element={<TrendyWear/>}/>
         <Route path="/formalwear" element={<FormalWear/>}/>
