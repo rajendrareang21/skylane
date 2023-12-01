@@ -14,7 +14,7 @@ const AdminOrders = () => {
     "Not Processed",
     "Processing",
     "Shipped",
-    "Deliverd",
+    "Delivered",
     "Cancelled",
   ]);
   const [changeStatus, setCHangeStatus] = useState("");
