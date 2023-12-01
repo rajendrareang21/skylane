@@ -108,6 +108,8 @@ const HomePage = () => {
       console.log(error);
     }
   };
+
+  
   return (
     <Layout title={"Online Shopping Site in India for Mobiles, Smartphones, Clothing, Shoes, Slippers"}>
 
@@ -117,7 +119,7 @@ const HomePage = () => {
         <div className="col-md-2 filters">
           <h4 className="text-center">Filter By Category</h4>
           <div className="d-flex flex-column">
-            {categories?.map((c) => (
+            {categories?.slice(0, 9).map((c) => (
               <Checkbox
                 key={c._id}
                 onChange={(e) => handleFilter(e.target.checked, c._id)}

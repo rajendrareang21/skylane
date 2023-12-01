@@ -17,13 +17,13 @@ const CategoryCard = () => {
             </div>
             <div className="col-md-3 category-card-trends">
                 <img src={image2} alt="Category Image" />
-                <Link to="/category/women">
+                <Link to="/women-collection">
                     <button className="visit-button"><span className='skew-fix'>Visit Women's Collection</span></button>
                 </Link>
             </div>
             <div className="col-md-3 category-card-trends">
                 <img src={image3} alt="Category Image" />
-                <Link to="/category/kids">
+                <Link to="/kids-collection">
                     <button className="visit-button"><span className='skew-fix'>Visit Kid's Collection</span></button>
                 </Link>
             </div>

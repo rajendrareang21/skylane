@@ -70,7 +70,7 @@ const Header = () => {
                       All Categories
                     </Link>
                   </li>
-                  {categories?.map((c) => (
+                  {categories?.slice(0, 9).map((c) => (
                     <li key={c.slug}>
                       <Link
                         className="dropdown-item"

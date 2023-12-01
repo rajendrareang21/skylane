@@ -8,7 +8,7 @@ const Categories = () => {
     <Layout title={"All Categories"}>
       <div className="container" style={{ marginTop: "50px" }}>
         <div className="row container">
-          {categories.map((c) => (
+          {categories.slice(0, 9).map((c) => (
             <div className="col-md-3 mt-5 mb-3 gx-3 gy-3" key={c._id}>
               <div className="card" style={{ borderRadius: '10px' }}>
                 <Link to={`/category/${c.slug}`} className="btn cat-btn">

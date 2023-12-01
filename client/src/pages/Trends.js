@@ -34,10 +34,10 @@ const Trends = () => {
           <p>"To wear dreams on one's feet is to begin to give a reality to one's dreams." - Roger Vivier</p>
         </div>
         <div class="button-container">
-          <Link to="/category/trendywear">
+          <Link to="/trendywear">
             <button class="a1z1-primary-button">Shop TrendyWear</button>
             </Link>
-            <Link to="/category/formalwear">
+            <Link to="/formalwear">
             <button class="a1z1-secondary-button">Shop FormalWear</button>
             </Link>
             <br/><br/><br/><br/>

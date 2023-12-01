@@ -26,7 +26,11 @@ import CategoryProduct from "./pages/CategoryProduct";
 import CartPage from "./pages/CartPage";
 import AdminOrders from "./pages/Admin/AdminOrders";
 import Developers from "./pages/Developers";
-import MenCollectionPage from "./pages/MensCollection";
+import WomensCollection from "./pages/WomensCollection";
+import MensCollection from "./pages/MensCollection";
+import KidsCollection from "./pages/KidsCollection";
+import TrendyWear from "./pages/TrendyWear";
+import FormalWear from "./pages/FormalWear";
 
 
 function App() {
@@ -34,7 +38,11 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/men-collection" element={<MenCollectionPage/>}/>
+        <Route path="/men-collection" element={<MensCollection/>}/>
+        <Route path="/trendywear" element={<TrendyWear/>}/>
+        <Route path="/formalwear" element={<FormalWear/>}/>
+        <Route path="/women-collection" element={<WomensCollection/>}/>
+        <Route path="/kids-collection" element={<KidsCollection/>}/>
         <Route path="/developers" element={<Developers/>}/>
         <Route path="/product/:slug" element={<ProductDetails />} />
         <Route path="/trends" element={<Trends/>} />
