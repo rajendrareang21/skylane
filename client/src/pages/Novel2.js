@@ -136,17 +136,15 @@ const Novel2 = () => {
   
   return (
     <Layout title={"Online Shopping Site in India for Mobiles, Smartphones, Clothing, Shoes, Slippers"}>
-      <div className="container-fluid row mt-2 home-page">
-        <div className="col-md-10 ">
-          <h1 className="text-center"></h1>
+      <div className="container-fluid row mt-2 home-page justify-content-center">
+      <h2 className="text-center recommended"><b><i>Recomended Products for You</i></b></h2>
+        <div className="col-md-10">
           <div className="d-flex flex-wrap">
             {products?.map((p) => (
          <ProductCard key={p._id} product={p} />
             ))}
           </div>
         </div>
-       
-       
       </div>
     </Layout>
   );
