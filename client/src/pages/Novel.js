@@ -8,7 +8,6 @@ import toast from "react-hot-toast";
 import Layout from "./../components/Layout/Layout";
 import { AiOutlineReload } from "react-icons/ai";
 import ProductCard from "../components/ProductCard";
-import CarouselSlide from "../components/a_component/CarouselSlide";
 import "../styles/Homepage.css";
 
 const Novel = () => {
@@ -22,6 +21,28 @@ const Novel = () => {
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
 
+
+  // Retrieve filters from localStorage on component mount
+  useEffect(() => {
+    const storedChecked = JSON.parse(localStorage.getItem("checked")) || [];
+    const storedRadio = localStorage.getItem("radio") || "";
+    
+    setChecked(storedChecked);
+    setRadio(storedRadio);
+  }, []);
+
+  // Save filters to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem("checked", JSON.stringify(checked));
+    localStorage.setItem("radio", radio);
+  }, [checked, radio]);
+
+    // Filter by price
+  const handlePriceFilter = (value) => {
+    setRadio(value);
+  };
+
+
   //get all cat
   const getAllCategory = async () => {
     try {
@@ -33,6 +54,12 @@ const Novel = () => {
       console.log(error);
     }
   };
+    // Clear filters and reload the page
+    const resetFilters = () => {
+      localStorage.removeItem("checked");
+      localStorage.removeItem("radio");
+      window.location.reload();
+    };
 
   useEffect(() => {
     getAllCategory();
@@ -119,7 +146,10 @@ const Novel = () => {
             {categories?.slice(0, 9).map((c) => (
               <Checkbox
                 key={c._id}
+                checked={checked.includes(c._id)}
                 onChange={(e) => handleFilter(e.target.checked, c._id)}
+                style={{ fontWeight: checked.includes(c._id) ? 'bold' : 'normal', color: checked.includes(c._id) ? 'blue' : 'black' }}
+             
               >
                 {c.name}
               </Checkbox>
@@ -128,7 +158,7 @@ const Novel = () => {
           {/* price filter */}
           <h4 className="text-center mt-3">Filter By Price</h4>
           <div className="d-flex flex-column">
-            <Radio.Group onChange={(e) => setRadio(e.target.value)}>
+            <Radio.Group onChange={(e) => handlePriceFilter(e.target.value)}>
               {Prices?.map((p) => (
                 <div key={p._id}>
                   <Radio value={p.array}>{p.name}</Radio>
@@ -139,7 +169,7 @@ const Novel = () => {
           <div className="d-flex flex-column">
             <button
               className="btn btn-dark"
-              onClick={() => window.location.reload()}
+              onClick={resetFilters}
             >
               RESET FILTERS
             </button>
