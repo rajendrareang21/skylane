@@ -32,6 +32,7 @@ import KidsCollection from "./pages/KidsCollection";
 import TrendyWear from "./pages/TrendyWear";
 import FormalWear from "./pages/FormalWear";
 import Novel from "./pages/Novel";
+import Novel2 from "./pages/Novel2";
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/novel" element={<Novel/>} />
+        <Route path="/novel2" element={<Novel2/>} />
         <Route path="/men-collection" element={<MensCollection/>}/>
         <Route path="/trendywear" element={<TrendyWear/>}/>
         <Route path="/formalwear" element={<FormalWear/>}/>

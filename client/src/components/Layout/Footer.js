@@ -15,8 +15,8 @@ const Footer = () => {
             <Link to="/about">About Skyline</Link> <br />
             <Link to="/about">News</Link> <br />
             <Link to="/about">Careers</Link> <br />
-            <Link to="/about">Investors</Link> <br />
-            <Link to="/about">Retern Centre</Link>
+            <Link to="/novel">Novel</Link> <br />
+            <Link to="/novel2">Novel2</Link>
           </div>
           <div className="col-sm">
             <Link to="/contact">Contact Us</Link> <br />
